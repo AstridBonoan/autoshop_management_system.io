@@ -28,8 +28,8 @@ export function ProductWordmark({
 }: {
   variant?: 'onDark' | 'onLight'
 }) {
-  const ink = variant === 'onDark' ? '#f7f1e8' : '#1c1612'
-  const accent = '#d4a017'
+  const ink = variant === 'onDark' ? '#e8eef3' : '#12171d'
+  const accent = '#3d9aad'
   return (
     <div className="leading-tight">
       <p className="font-display text-2xl uppercase tracking-[0.14em]" style={{ color: ink }}>

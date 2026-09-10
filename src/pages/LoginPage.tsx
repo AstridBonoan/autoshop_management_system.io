@@ -42,7 +42,7 @@ export function LoginPage() {
         <BrandLogo variant="onDark" className="h-16 w-auto max-w-xs object-contain object-left" />
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-gold">{PRODUCT.name}</p>
-          <h1 className="mt-3 font-display text-4xl leading-tight lg:text-5xl">{PRODUCT.tagline}</h1>
+          <h1 className="mt-3 font-display text-4xl uppercase leading-tight lg:text-5xl">{PRODUCT.tagline}</h1>
           <p className="brand-muted mt-4 max-w-md">{PRODUCT.description}</p>
           <p className="brand-muted mt-6 text-sm">Built by {PRODUCT.developer}.</p>
         </div>

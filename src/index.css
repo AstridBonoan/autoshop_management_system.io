@@ -1,21 +1,21 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
-  --font-display: Sora, system-ui, sans-serif;
-  --color-ink: #1c1612;
-  --color-ink-soft: #6b5e52;
-  --color-paper: #f7f1e8;
-  --color-paper-2: #efe4d4;
-  --color-card: #fffaf3;
-  --color-line: #e4d6c4;
-  --color-teal: #c45c26;
-  --color-teal-deep: #1a1410;
-  --color-gold: #d4a017;
-  --color-gold-soft: #f3e3b8;
+  --font-sans: 'Source Sans 3', system-ui, sans-serif;
+  --font-display: Oswald, system-ui, sans-serif;
+  --color-ink: #12171d;
+  --color-ink-soft: #5c6874;
+  --color-paper: #eef2f5;
+  --color-paper-2: #dfe5eb;
+  --color-card: #ffffff;
+  --color-line: #c8d0d8;
+  --color-teal: #1b6b82;
+  --color-teal-deep: #0b1520;
+  --color-gold: #3d9aad;
+  --color-gold-soft: #d5eef3;
   --color-danger: #b42318;
-  --color-success: #3f6b4a;
-  --color-warn: #b45309;
+  --color-success: #2f6b4f;
+  --color-warn: #c2410c;
 }
 
 html,
@@ -37,7 +37,8 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 :focus-visible {
@@ -46,16 +47,16 @@ h4 {
 }
 
 .brand-gradient {
-  background-image: linear-gradient(90deg, #8a3b16 0%, #c45c26 48%, #d4a017 100%);
+  background-image: linear-gradient(90deg, #0e3a4a 0%, #1b6b82 52%, #3d9aad 100%);
 }
 
 .brand-panel {
-  background-color: #1a1410;
+  background-color: #0b1520;
   background-image:
-    radial-gradient(ellipse at top right, rgba(196, 92, 38, 0.28), transparent 55%),
-    linear-gradient(180deg, #1a1410, #120e0b);
+    radial-gradient(ellipse at top right, rgba(61, 154, 173, 0.22), transparent 52%),
+    linear-gradient(180deg, #12202c, #0b1520);
 }
 
 .brand-muted {
-  color: #d8cfc4;
+  color: #9aa8b5;
 }

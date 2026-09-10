@@ -106,7 +106,7 @@ export function AppShell() {
               if (!items.length) return null
               return (
                 <div key={group.label}>
-                  <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">{group.label}</p>
+                  <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#7d8d9c]">{group.label}</p>
                   <div className="space-y-1">
                     {items.map((item) => {
                       const Icon = item.icon
@@ -117,7 +117,7 @@ export function AppShell() {
                           end={item.to === '/' || item.to === '/settings'}
                           onClick={() => setOpen(false)}
                           className={({ isActive }) =>
-                            `flex min-h-10 items-center gap-3 rounded-lg px-3 py-2 text-sm ${isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:bg-white/5 hover:text-white'}`
+                            `flex min-h-10 items-center gap-3 rounded-lg px-3 py-2 text-sm ${isActive ? 'bg-gold/15 text-gold' : 'text-[#c5d0d8] hover:bg-white/5 hover:text-[#e8eef3]'}`
                           }
                         >
                           <Icon size={18} />
