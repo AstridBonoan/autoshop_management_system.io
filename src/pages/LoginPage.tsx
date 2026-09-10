@@ -1,7 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { BrandLockup } from '../components/BrandLogo'
-import { ProductMark } from '../components/ProductMark'
+import { BrandLogo } from '../components/BrandLogo'
 import { Alert, Button, Field, Input } from '../components/ui'
 import { useApp } from '../context/AppContext'
 import { PRODUCT } from '../lib/autoshop'
@@ -40,20 +39,19 @@ export function LoginPage() {
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="brand-panel hidden p-12 text-white lg:flex lg:flex-col lg:justify-between">
-        <ProductMark variant="onDark" />
+        <BrandLogo variant="onDark" className="h-16 w-auto max-w-xs object-contain object-left" />
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-gold">{PRODUCT.name}</p>
-          <h1 className="mt-3 font-display text-4xl leading-tight lg:text-5xl">{PRODUCT.tagline}</h1>
-          <p className="mt-4 max-w-md text-slate-300">{PRODUCT.description}</p>
-          <p className="mt-6 text-sm text-slate-400">A B&C Software & Web product for independent shops and service centers.</p>
+          <h1 className="mt-3 font-display text-4xl uppercase leading-tight lg:text-5xl">{PRODUCT.tagline}</h1>
+          <p className="brand-muted mt-4 max-w-md">{PRODUCT.description}</p>
+          <p className="brand-muted mt-6 text-sm">Built by {PRODUCT.developer}.</p>
         </div>
-        <p className="text-sm text-slate-400">Demo accounts use the password demo123.</p>
+        <p className="brand-muted text-sm">Demo accounts use the password demo123.</p>
       </div>
       <div className="flex items-center justify-center bg-paper p-6">
         <form onSubmit={onSubmit} className="w-full max-w-md space-y-4 rounded-2xl border border-line bg-card p-8 shadow-sm">
           <div className="lg:hidden">
-            <BrandLockup />
-            <div className="mt-4"><ProductMark variant="onLight" /></div>
+            <BrandLogo variant="onLight" className="h-14 w-auto max-w-[220px] object-contain object-left" />
           </div>
           <h2 className="font-display text-3xl">Sign in</h2>
           <p className="text-sm text-ink-soft">Use your shop account to continue.</p>

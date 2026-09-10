@@ -1,5 +1,6 @@
 import { PRODUCT } from '../lib/autoshop'
 import { classNames } from '../lib/format'
+import { BrandLogo, BrandMark } from './BrandLogo'
 
 export function ProductMark({
   variant = 'onDark',
@@ -10,26 +11,33 @@ export function ProductMark({
   showWordmark?: boolean
   className?: string
 }) {
-  const ink = variant === 'onDark' ? '#f5f7fa' : '#0b1220'
-  const accent = '#00a3ff'
+  if (showWordmark) {
+    return (
+      <BrandLogo
+        variant={variant}
+        className={classNames('h-14 w-auto max-w-[220px] object-contain object-left', className)}
+      />
+    )
+  }
+
+  return <BrandMark className={classNames('h-10 w-10', className)} />
+}
+
+export function ProductWordmark({
+  variant = 'onDark',
+}: {
+  variant?: 'onDark' | 'onLight'
+}) {
+  const ink = variant === 'onDark' ? '#f6f1e8' : '#1c1410'
+  const accent = '#e8a04a'
   return (
-    <div className={classNames('inline-flex items-center gap-2.5', className)}>
-      <svg viewBox="0 0 40 40" className="h-10 w-10 shrink-0" aria-hidden="true">
-        <rect x="3" y="8" width="6" height="24" rx="1.5" fill={ink} opacity="0.88" />
-        <rect x="17" y="5" width="6" height="30" rx="1.5" fill={accent} />
-        <rect x="31" y="8" width="6" height="24" rx="1.5" fill={ink} opacity="0.88" />
-        <rect x="1" y="18" width="38" height="4" rx="2" fill={accent} />
-      </svg>
-      {showWordmark ? (
-        <div className="leading-tight">
-          <p className="font-display text-xl tracking-tight" style={{ color: ink }}>
-            {PRODUCT.name}
-          </p>
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em]" style={{ color: accent }}>
-            Shop operations
-          </p>
-        </div>
-      ) : null}
+    <div className="leading-tight">
+      <p className="font-display text-2xl uppercase tracking-[0.14em]" style={{ color: ink }}>
+        {PRODUCT.name}
+      </p>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.2em]" style={{ color: accent }}>
+        {PRODUCT.tagline}
+      </p>
     </div>
   )
 }

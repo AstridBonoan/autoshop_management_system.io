@@ -94,7 +94,7 @@ export function AppShell() {
           <div className="flex items-start justify-between gap-2 px-4 py-5">
             <div className="min-w-0">
               <ProductMark variant="onDark" />
-              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">{PRODUCT.developer}</p>
+              <p className="brand-muted mt-2 text-[10px] font-semibold uppercase tracking-[0.2em]">{PRODUCT.developer}</p>
             </div>
             <button className="lg:hidden" onClick={() => setOpen(false)} aria-label="Close menu">
               <X />
@@ -106,7 +106,7 @@ export function AppShell() {
               if (!items.length) return null
               return (
                 <div key={group.label}>
-                  <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">{group.label}</p>
+                  <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#8a7d72]">{group.label}</p>
                   <div className="space-y-1">
                     {items.map((item) => {
                       const Icon = item.icon
@@ -117,7 +117,7 @@ export function AppShell() {
                           end={item.to === '/' || item.to === '/settings'}
                           onClick={() => setOpen(false)}
                           className={({ isActive }) =>
-                            `flex min-h-10 items-center gap-3 rounded-lg px-3 py-2 text-sm ${isActive ? 'bg-white/10 text-white' : 'text-slate-300 hover:bg-white/5 hover:text-white'}`
+                            `flex min-h-10 items-center gap-3 rounded-lg px-3 py-2 text-sm ${isActive ? 'bg-gold/15 text-gold' : 'text-[#d8cfc4] hover:bg-white/5 hover:text-[#f6f1e8]'}`
                           }
                         >
                           <Icon size={18} />
